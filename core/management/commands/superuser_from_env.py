@@ -7,8 +7,8 @@ import os
 class Command(BaseCommand):
 
     def handle(self,  **options):
-        name = os.environ.get('SUPERUSER_NAME')
-        password = os.environ.get('SUPERUSER_PASSWORD')
+        name = os.environ.get('SUPERUSER_NAME', 'admin')
+        password = os.environ.get('SUPERUSER_PASSWORD', 'admin')
         User = get_user_model()
         if not User.objects.filter(username=name).exists():
             User.objects.create_superuser(username=name, password=password)
