@@ -8,7 +8,7 @@ RUN apt-get upgrade && apt-get update \
 
 WORKDIR /project
 
-COPY test_backend .
+COPY . .
 
 RUN pip3 install --upgrade pip
 
