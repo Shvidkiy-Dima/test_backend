@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+from django.core.management.utils import get_random_secret_key
 from pathlib import Path
 import django_heroku
 import os
@@ -22,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'i0r&c_@!4xd&ze##voyl&l0js-(p^lo)cv+k+7r7s8zfr24zj!'
+SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False if os.getenv('ENV') == 'PROD' else True
@@ -143,7 +144,7 @@ REST_FRAMEWORK = {
 ########### Integration
 COMPANIES_URL = 'http://otp.spider.ru/test/companies/'
 PRODUCTS_POSTFIX = '/products/'
-TASK_SCHEDULE = 60 * int(os.getenv('INTEGRATION_SCHEDULE_MIN', 1))
+TASK_SCHEDULE = 60 * int(os.getenv('INTEGRATION_SCHEDULE_MIN', 30))
 
 ########### Celery
 CELERY_ALWAYS_EAGER = False

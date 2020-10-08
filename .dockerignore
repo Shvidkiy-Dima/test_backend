@@ -3,3 +3,4 @@ celerybeat-schedule
 .git/
 venv/
 staticfiles/
+postgres_data/

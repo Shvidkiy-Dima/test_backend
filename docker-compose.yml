@@ -33,7 +33,7 @@ services:
     - DB_NAME=backend_db
     - DB_USER=admin
     - DB_PASSWORD=admin
-    - INTEGRATION_SCHEDULE_MIN=2
+    - INTEGRATION_SCHEDULE_MIN=30
     depends_on:
       - rabbit
       - db
@@ -44,6 +44,8 @@ services:
     hostname: db
     image: kartoza/postgis
     restart: always
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=admin
