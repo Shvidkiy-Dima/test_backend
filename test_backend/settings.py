@@ -142,7 +142,7 @@ REST_FRAMEWORK = {
 ########### Integration
 COMPANIES_URL = 'http://otp.spider.ru/test/companies/'
 PRODUCTS_POSTFIX = '/products/'
-TASK_SCHEDULE = 60*30
+TASK_SCHEDULE = 60 * int(os.getenv('INTEGRATION_SCHEDULE_MIN', 30))
 
 ########### Celery
 CELERY_ALWAYS_EAGER = False
@@ -166,6 +166,12 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
+        'formatter': 'simple',
+    },
     'formatters': {
         'simple': {
             'format': '%(asctime)s %(levelname)s %(message)s'
@@ -180,6 +186,11 @@ LOGGING = {
             'maxBytes': 16*1000000,
             'filename': 'logs/integration_log.log'
         },
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        }
     },
     'loggers': {
         'integration_task': {

@@ -1,3 +1,5 @@
 gdal-bin
 libgdal-dev
 libblas-dev
+libproj-dev
+libgeos-dev
