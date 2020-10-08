@@ -1,0 +1,5 @@
+celerybeat-schedule
+.idea/
+.git/
+venv/
+staticfiles/
