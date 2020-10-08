@@ -18,7 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', admin.site.urls),
-    path('log_viewer/', include('log_viewer.urls')),
+    path('logs/', include('log_viewer.urls')),
     path('', include('core.urls')),
     path('user/', include('custom_user.urls')),
 ]
