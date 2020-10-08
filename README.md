@@ -6,7 +6,8 @@ how often fetch data and populate local DB (default 30min).
 
 Get nearest companies -  /company/nearest/?coordinates=21,21. Company coordinates set up in admin panel.
 
-Check it out - https://testbackendproject.herokuapp.com/
+Check it out - https://testbackendproject.herokuapp.com/ 
+ - password, username = admin, admin
 
 ### Deploy
 - Go to root project directory and run - docker-compose up --build
