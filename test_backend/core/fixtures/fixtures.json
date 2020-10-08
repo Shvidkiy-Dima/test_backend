@@ -1,0 +1,743 @@
+[
+{
+ "model": "admin.logentry",
+ "pk": 1,
+ "fields": {
+  "action_time": "2020-10-07T17:00:44.090Z",
+  "user": 1,
+  "content_type": 7,
+  "object_id": "4",
+  "object_repr": "Сушитория",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"Coordinates\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 2,
+ "fields": {
+  "action_time": "2020-10-07T17:01:07.760Z",
+  "user": 1,
+  "content_type": 7,
+  "object_id": "5",
+  "object_repr": "La Vaca",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"Coordinates\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 3,
+ "fields": {
+  "action_time": "2020-10-07T17:28:36.564Z",
+  "user": 1,
+  "content_type": 9,
+  "object_id": "2",
+  "object_repr": "Dima",
+  "action_flag": 1,
+  "change_message": "[{\"added\": {}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 4,
+ "fields": {
+  "action_time": "2020-10-07T17:32:14.572Z",
+  "user": 1,
+  "content_type": 11,
+  "object_id": "1",
+  "object_repr": "2cc5799b0ce8a9bbca6eae371fadb5c611eeb784",
+  "action_flag": 1,
+  "change_message": "[{\"added\": {}}]"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 1,
+ "fields": {
+  "name": "Can add log entry",
+  "content_type": 1,
+  "codename": "add_logentry"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 2,
+ "fields": {
+  "name": "Can change log entry",
+  "content_type": 1,
+  "codename": "change_logentry"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 3,
+ "fields": {
+  "name": "Can delete log entry",
+  "content_type": 1,
+  "codename": "delete_logentry"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 4,
+ "fields": {
+  "name": "Can view log entry",
+  "content_type": 1,
+  "codename": "view_logentry"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 5,
+ "fields": {
+  "name": "Can add permission",
+  "content_type": 2,
+  "codename": "add_permission"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 6,
+ "fields": {
+  "name": "Can change permission",
+  "content_type": 2,
+  "codename": "change_permission"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 7,
+ "fields": {
+  "name": "Can delete permission",
+  "content_type": 2,
+  "codename": "delete_permission"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 8,
+ "fields": {
+  "name": "Can view permission",
+  "content_type": 2,
+  "codename": "view_permission"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 9,
+ "fields": {
+  "name": "Can add group",
+  "content_type": 3,
+  "codename": "add_group"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 10,
+ "fields": {
+  "name": "Can change group",
+  "content_type": 3,
+  "codename": "change_group"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 11,
+ "fields": {
+  "name": "Can delete group",
+  "content_type": 3,
+  "codename": "delete_group"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 12,
+ "fields": {
+  "name": "Can view group",
+  "content_type": 3,
+  "codename": "view_group"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 13,
+ "fields": {
+  "name": "Can add content type",
+  "content_type": 4,
+  "codename": "add_contenttype"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 14,
+ "fields": {
+  "name": "Can change content type",
+  "content_type": 4,
+  "codename": "change_contenttype"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 15,
+ "fields": {
+  "name": "Can delete content type",
+  "content_type": 4,
+  "codename": "delete_contenttype"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 16,
+ "fields": {
+  "name": "Can view content type",
+  "content_type": 4,
+  "codename": "view_contenttype"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 17,
+ "fields": {
+  "name": "Can add session",
+  "content_type": 5,
+  "codename": "add_session"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 18,
+ "fields": {
+  "name": "Can change session",
+  "content_type": 5,
+  "codename": "change_session"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 19,
+ "fields": {
+  "name": "Can delete session",
+  "content_type": 5,
+  "codename": "delete_session"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 20,
+ "fields": {
+  "name": "Can view session",
+  "content_type": 5,
+  "codename": "view_session"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 21,
+ "fields": {
+  "name": "Can add category",
+  "content_type": 6,
+  "codename": "add_category"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 22,
+ "fields": {
+  "name": "Can change category",
+  "content_type": 6,
+  "codename": "change_category"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 23,
+ "fields": {
+  "name": "Can delete category",
+  "content_type": 6,
+  "codename": "delete_category"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 24,
+ "fields": {
+  "name": "Can view category",
+  "content_type": 6,
+  "codename": "view_category"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 25,
+ "fields": {
+  "name": "Can add company",
+  "content_type": 7,
+  "codename": "add_company"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 26,
+ "fields": {
+  "name": "Can change company",
+  "content_type": 7,
+  "codename": "change_company"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 27,
+ "fields": {
+  "name": "Can delete company",
+  "content_type": 7,
+  "codename": "delete_company"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 28,
+ "fields": {
+  "name": "Can view company",
+  "content_type": 7,
+  "codename": "view_company"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 29,
+ "fields": {
+  "name": "Can add product",
+  "content_type": 8,
+  "codename": "add_product"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 30,
+ "fields": {
+  "name": "Can change product",
+  "content_type": 8,
+  "codename": "change_product"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 31,
+ "fields": {
+  "name": "Can delete product",
+  "content_type": 8,
+  "codename": "delete_product"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 32,
+ "fields": {
+  "name": "Can view product",
+  "content_type": 8,
+  "codename": "view_product"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 33,
+ "fields": {
+  "name": "Can add user",
+  "content_type": 9,
+  "codename": "add_customuser"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 34,
+ "fields": {
+  "name": "Can change user",
+  "content_type": 9,
+  "codename": "change_customuser"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 35,
+ "fields": {
+  "name": "Can delete user",
+  "content_type": 9,
+  "codename": "delete_customuser"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 36,
+ "fields": {
+  "name": "Can view user",
+  "content_type": 9,
+  "codename": "view_customuser"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 37,
+ "fields": {
+  "name": "Can add Token",
+  "content_type": 10,
+  "codename": "add_token"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 38,
+ "fields": {
+  "name": "Can change Token",
+  "content_type": 10,
+  "codename": "change_token"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 39,
+ "fields": {
+  "name": "Can delete Token",
+  "content_type": 10,
+  "codename": "delete_token"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 40,
+ "fields": {
+  "name": "Can view Token",
+  "content_type": 10,
+  "codename": "view_token"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 41,
+ "fields": {
+  "name": "Can add token",
+  "content_type": 11,
+  "codename": "add_tokenproxy"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 42,
+ "fields": {
+  "name": "Can change token",
+  "content_type": 11,
+  "codename": "change_tokenproxy"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 43,
+ "fields": {
+  "name": "Can delete token",
+  "content_type": 11,
+  "codename": "delete_tokenproxy"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 44,
+ "fields": {
+  "name": "Can view token",
+  "content_type": 11,
+  "codename": "view_tokenproxy"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 1,
+ "fields": {
+  "app_label": "admin",
+  "model": "logentry"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 2,
+ "fields": {
+  "app_label": "auth",
+  "model": "permission"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 3,
+ "fields": {
+  "app_label": "auth",
+  "model": "group"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 4,
+ "fields": {
+  "app_label": "contenttypes",
+  "model": "contenttype"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 5,
+ "fields": {
+  "app_label": "sessions",
+  "model": "session"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 6,
+ "fields": {
+  "app_label": "core",
+  "model": "category"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 7,
+ "fields": {
+  "app_label": "core",
+  "model": "company"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 8,
+ "fields": {
+  "app_label": "core",
+  "model": "product"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 9,
+ "fields": {
+  "app_label": "custom_user",
+  "model": "customuser"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 10,
+ "fields": {
+  "app_label": "authtoken",
+  "model": "token"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 11,
+ "fields": {
+  "app_label": "authtoken",
+  "model": "tokenproxy"
+ }
+},
+{
+ "model": "sessions.session",
+ "pk": "xd66d1ulab2blc1sumh8q672x3y1z5s3",
+ "fields": {
+  "session_data": ".eJxVjDEOwjAMRe-SGUVxQ2PCyM4ZKttxSQElUtNOiLtDpQ6w_vfef5mB1iUPa9N5mJI5GzCH341JHlo2kO5UbtVKLcs8sd0Uu9NmrzXp87K7fweZWv7WhDyyAy8QQFEYCaL3IB1FBUZVDXBMPfWj65DRsYLEU3TIAYJTMe8P81k4Gg:1kPsBX:azU1bQVAdG9IOMzG9vSI7sCL7d6gI46cG9_a860tuGA",
+  "expire_date": "2020-10-20T18:59:39.179Z"
+ }
+},
+{
+ "model": "core.category",
+ "pk": 5,
+ "fields": {
+  "name": "Роллы"
+ }
+},
+{
+ "model": "core.category",
+ "pk": 6,
+ "fields": {
+  "name": "Пицца"
+ }
+},
+{
+ "model": "core.category",
+ "pk": 7,
+ "fields": {
+  "name": "Суши"
+ }
+},
+{
+ "model": "core.company",
+ "pk": 4,
+ "fields": {
+  "description": null,
+  "is_active": true,
+  "coordinates": "SRID=4326;POINT (40.25390625 45.52734375)",
+  "name": "Сушитория"
+ }
+},
+{
+ "model": "core.company",
+ "pk": 5,
+ "fields": {
+  "description": null,
+  "is_active": true,
+  "coordinates": "SRID=4326;POINT (23.73046875 46.7578125)",
+  "name": "La Vaca"
+ }
+},
+{
+ "model": "core.product",
+ "pk": 91,
+ "fields": {
+  "description": "лосось, огурец, сыр сливочный",
+  "is_active": true,
+  "name": "Ролл Филадельфия с огурцом",
+  "category": 5,
+  "company": 4
+ }
+},
+{
+ "model": "core.product",
+ "pk": 95,
+ "fields": {
+  "description": null,
+  "is_active": true,
+  "name": "Ролл с лососем",
+  "category": 5,
+  "company": 5
+ }
+},
+{
+ "model": "core.product",
+ "pk": 99,
+ "fields": {
+  "description": "морской окунь темпура, огурец, рис, соус Яки",
+  "is_active": true,
+  "name": "Ролл Яки",
+  "category": 5,
+  "company": 4
+ }
+},
+{
+ "model": "core.product",
+ "pk": 101,
+ "fields": {
+  "description": "лосось, авокадо, масаго, огурец",
+  "is_active": true,
+  "name": "Ролл Калифорния",
+  "category": 5,
+  "company": 5
+ }
+},
+{
+ "model": "core.product",
+ "pk": 102,
+ "fields": {
+  "description": null,
+  "is_active": true,
+  "name": "Нигири суши Сякэ",
+  "category": 7,
+  "company": 4
+ }
+},
+{
+ "model": "core.product",
+ "pk": 103,
+ "fields": {
+  "description": "тунец темпура, помидор, соус Яки, икра масаго, кунжут, рис",
+  "is_active": true,
+  "name": "Ролл Магуро",
+  "category": 5,
+  "company": 4
+ }
+},
+{
+ "model": "core.product",
+ "pk": 104,
+ "fields": {
+  "description": "угорь копченый, лосось, сыр сливочный, огурец, рис, соус унаги, кунжут, японский соус",
+  "is_active": true,
+  "name": "Ролл Филадельфия дуэт",
+  "category": 5,
+  "company": 4
+ }
+},
+{
+ "model": "core.product",
+ "pk": 105,
+ "fields": {
+  "description": "филе куриное, лист салата,сыр Пармезан, соус Цезарь, помидор, яйцо перепелиное, сухарики",
+  "is_active": true,
+  "name": "Салат Цезарь с курицей",
+  "category": 6,
+  "company": 5
+ }
+},
+{
+ "model": "core.product",
+ "pk": 106,
+ "fields": {
+  "description": "помидоры, моццарелла, базилик, соус Пиццайолло",
+  "is_active": true,
+  "name": "Пицца Маргарита Итальянская",
+  "category": 6,
+  "company": 5
+ }
+},
+{
+ "model": "core.product",
+ "pk": 107,
+ "fields": {
+  "description": null,
+  "is_active": true,
+  "name": "Пицца Кватро Форматжио с ветчиной и грибами Итальянская",
+  "category": 6,
+  "company": 5
+ }
+},
+{
+ "model": "custom_user.customuser",
+ "pk": 1,
+ "fields": {
+  "password": "pbkdf2_sha256$216000$tmjDfnGcKedy$2AW7Y49QHBzslWGClz8K2zHPe7nHTyYW5y54TsVQrds=",
+  "last_login": "2020-10-06T18:59:39.132Z",
+  "is_superuser": true,
+  "username": "Boris",
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "is_staff": true,
+  "is_active": true,
+  "date_joined": "2020-10-06T18:58:14.703Z",
+  "phone": null,
+  "groups": [],
+  "user_permissions": []
+ }
+},
+{
+ "model": "custom_user.customuser",
+ "pk": 2,
+ "fields": {
+  "password": "1996",
+  "last_login": null,
+  "is_superuser": false,
+  "username": "Dima",
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "is_staff": false,
+  "is_active": true,
+  "date_joined": "2020-10-07T17:27:52Z",
+  "phone": "89054134987",
+  "groups": [],
+  "user_permissions": []
+ }
+},
+{
+ "model": "authtoken.token",
+ "pk": "2cc5799b0ce8a9bbca6eae371fadb5c611eeb784",
+ "fields": {
+  "user": 1,
+  "created": "2020-10-07T17:32:14.549Z"
+ }
+}
+]
