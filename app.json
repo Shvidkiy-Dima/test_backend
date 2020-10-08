@@ -1,14 +1,6 @@
 {
-  "name": "Chat",
+  "name": "Backend",
   "env": {
-    "DISABLE_COLLECTSTATIC": {
-      "description": "Disables Heroku collectstatic",
-      "value": "1"
-    },
-    "AUTO_MIGRATE": {
-      "description": "Heroku setting to run Django migrate automatically (it is run by bin/post_compile)",
-      "value": "1"
-    },
     "ENV": {
       "value": "PROD"
     }
@@ -21,10 +13,7 @@
   },
   "addons": [
     {
-      "plan": "heroku-redis:hobby-dev"
-    },
-    {
-      "plan": "cloudinary:starter"
+      "plan": "cloudamqp:lemur"
     },
     {
       "plan": "heroku-postgresql:hobby-dev"
@@ -32,7 +21,10 @@
   ],
   "buildpacks": [
     {
-      "url": "heroku/nodejs"
+      "url": "heroku-community/apt"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-geo-buildpack.git"
     },
     {
       "url": "heroku/python"
