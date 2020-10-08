@@ -30,7 +30,7 @@ services:
     depends_on:
       - rabbit
       - test_backend
-    command: /bin/bash -c "exec celery -A test_backend worker -B -l info"
+    command: /bin/bash -c "exec celery -A test_backend worker -B"
 
   db:
     hostname: db
