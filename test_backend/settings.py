@@ -147,7 +147,7 @@ TASK_SCHEDULE = 60*30
 ########### Celery
 CELERY_ALWAYS_EAGER = False
 CELERY_BROKER_HOST = os.environ.get('CELERY_BROKER', 'localhost')
-CELERY_BROKER_URL = 'pyamqp://guest@'+ CELERY_BROKER_HOST + '//'
+CELERY_BROKER_URL = os.getenv('CLOUDAMQP_URL', 'pyamqp://guest@'+ CELERY_BROKER_HOST + '//')
 CELERY_BEAT_SCHEDULE = {
     'integration': {
         'task': 'core.tasks.integrate',

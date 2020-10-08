@@ -1,9 +1,9 @@
 version: '3'
 services:
 
-  backend:
+  test_backend:
     build: .
-    image: backend
+    image: test_backend
     depends_on:
         - db
         - rabbit
@@ -24,12 +24,12 @@ services:
     image: rabbitmq:latest
 
   celery:
-    image: backend
+    image: test_backend
     environment:
     - CELERY_BROKER=rabbit
     depends_on:
       - rabbit
-      - backend
+      - test_backend
     command: /bin/bash -c "exec celery -A test_backend worker -B -l info"
 
   db:
