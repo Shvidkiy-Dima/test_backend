@@ -202,3 +202,4 @@ LOGGING = {
 }
 
 django_heroku.settings(locals(), staticfiles=False, test_runner=False)
+DATABASES['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
