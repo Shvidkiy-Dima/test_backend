@@ -1,3 +1,6 @@
 gdal-bin
 libgdal-dev
-libatlas-base-dev
+libpq-dev
+gdal-bin
+libcogl-pango-dev
+libcairo2-dev
