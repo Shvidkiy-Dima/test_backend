@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import django_heroku
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'i0r&c_@!4xd&ze##voyl&l0js-(p^lo)cv+k+7r7s8zfr24zj!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = False if os.getenv('ENV') == 'PROD' else True
 
 ALLOWED_HOSTS = ['*']
 
@@ -148,7 +149,7 @@ CELERY_ALWAYS_EAGER = False
 CELERY_BROKER_HOST = os.environ.get('CELERY_BROKER', 'localhost')
 CELERY_BROKER_URL = 'pyamqp://guest@'+ CELERY_BROKER_HOST + '//'
 CELERY_BEAT_SCHEDULE = {
-    'add-every-30-seconds': {
+    'integration': {
         'task': 'core.tasks.integrate',
         'schedule': TASK_SCHEDULE,
     },
@@ -188,3 +189,5 @@ LOGGING = {
         },
     }
 }
+
+django_heroku.settings(locals(), staticfiles=False, test_runner=False)
