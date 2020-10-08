@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'django_filters',
+    "log_viewer",
 ]
 
 MIDDLEWARE = [
@@ -142,12 +143,12 @@ REST_FRAMEWORK = {
 ########### Integration
 COMPANIES_URL = 'http://otp.spider.ru/test/companies/'
 PRODUCTS_POSTFIX = '/products/'
-TASK_SCHEDULE = 60 * int(os.getenv('INTEGRATION_SCHEDULE_MIN', 30))
+TASK_SCHEDULE = 60 * int(os.getenv('INTEGRATION_SCHEDULE_MIN', 1))
 
 ########### Celery
 CELERY_ALWAYS_EAGER = False
 CELERY_BROKER_HOST = os.environ.get('CELERY_BROKER', 'localhost')
-CELERY_BROKER_URL = os.getenv('CLOUDAMQP_URL', 'pyamqp://guest@'+ CELERY_BROKER_HOST + '//')
+CELERY_BROKER_URL = os.getenv('CLOUDAMQP_URL', f'pyamqp://guest@{CELERY_BROKER_HOST}//')
 CELERY_BEAT_SCHEDULE = {
     'integration': {
         'task': 'core.tasks.integrate',
@@ -163,23 +164,28 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ######## Loging
 
+logs_dir = os.path.join(BASE_DIR, 'logs')
+
+if not os.path.exists(logs_dir):
+    os.makedirs(logs_dir)
+
+LOG_VIEWER_FILES_PATTERN = '*.log'
+LOG_VIEWER_FILES_DIR = os.path.join(BASE_DIR, 'logs')
+LOG_VIEWER_PATTERNS = ['OFNI']
+LOG_VIEWER_MAX_READ_LINES = 1000  # total log lines will be read
+LOG_VIEWER_PAGE_LENGTH = 25       # total log lines per-page
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-
-    'root': {
-        'handlers': ['console'],
-        'level': 'INFO',
-        'formatter': 'simple',
-    },
     'formatters': {
         'simple': {
-            'format': '%(asctime)s %(levelname)s %(message)s'
+            'format': '%(levelname)s %(asctime)s %(message)s'
         },
     },
     'handlers': {
         'log_file': {
-            'level': 'DEBUG',
+            'level': 'INFO',
             'class': 'logging.handlers.RotatingFileHandler',
             'backupCount': 1,
             'formatter': 'simple',
@@ -196,10 +202,11 @@ LOGGING = {
         'integration_task': {
             'handlers': ['log_file'],
             'propagate': True,
-            'level': 'DEBUG'
+            'level': 'INFO'
         },
     }
 }
 
-django_heroku.settings(locals(), staticfiles=False, test_runner=False)
+
+django_heroku.settings(locals(), staticfiles=False, test_runner=False, logging=False)
 DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
