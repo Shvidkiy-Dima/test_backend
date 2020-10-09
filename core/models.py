@@ -36,4 +36,3 @@ class Product(BaseCoreModel):
     class Meta:
         constraints = [models.UniqueConstraint(fields=['company', 'name'],
                                                name='uniq_in_company')]
-

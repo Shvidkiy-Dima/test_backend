@@ -15,4 +15,3 @@ class Command(BaseCommand):
             self.stdout.write('SUPERUSER WAS CREATED!')
         else:
             self.stderr.write('SUPERUSER ALREADY EXISTS!')
-

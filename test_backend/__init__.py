@@ -1,1 +1,1 @@
-from .celery import CeleryApp
+from .celery import CeleryApp  # noqa: F401

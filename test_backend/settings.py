@@ -141,12 +141,12 @@ REST_FRAMEWORK = {
 
 }
 
-########### Integration
+# Integration
 COMPANIES_URL = 'http://otp.spider.ru/test/companies/'
 PRODUCTS_POSTFIX = '/products/'
 TASK_SCHEDULE = 60 * int(os.getenv('INTEGRATION_SCHEDULE_MIN', 30))
 
-########### Celery
+# Celery
 CELERY_ALWAYS_EAGER = False
 CELERY_BROKER_HOST = os.environ.get('CELERY_BROKER', 'localhost')
 CELERY_BROKER_URL = os.getenv('CLOUDAMQP_URL', f'pyamqp://guest@{CELERY_BROKER_HOST}//')
@@ -157,13 +157,13 @@ CELERY_BEAT_SCHEDULE = {
     },
 }
 
-######## Static
+# Static
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-######## Loging
+# Loging
 
 logs_dir = os.path.join(BASE_DIR, 'logs')
 
